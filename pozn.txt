@@ -3,3 +3,13 @@ má N - 1 Edges
 cykly budem hľadať odoberaním Vs kt maju 1 Edge
 
 začiatok 04.06.2026
+
+1. zobrať vstup
+2. check N-1 Edges - false -> else
+3. odoberať
+    a. ostane 1 V - true
+    b. ostane > 1 V - false
+
+todos:
+    find a better way to store graph then in cv7
+    and how to look up the number of connections
