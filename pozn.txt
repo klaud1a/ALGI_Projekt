@@ -1,0 +1,5 @@
+strom je acyklický a spojitý
+má N - 1 Edges
+cykly budem hľadať odoberaním Vs kt maju 1 Edge
+
+začiatok 04.06.2026
