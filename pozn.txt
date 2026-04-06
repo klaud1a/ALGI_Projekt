@@ -11,5 +11,5 @@ začiatok 04.06.2026
     b. ostane > 1 V - false
 
 todos:
-    find a better way to store graph then in cv7
+    find a better way to store graph then in cv7 -> map <int id, vector neighbors>
     and how to look up the number of connections
