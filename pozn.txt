@@ -12,4 +12,12 @@ začiatok 04.06.2026
 
 todos:
     find a better way to store graph then in cv7 -> map <int id, vector neighbors>
-    and how to look up the number of connections
+    and how to look up the number of connections -> size of vector
+
+sources:
+https://en.wikipedia.org/wiki/Tree_(graph_theory)#Forest
+https://www.geeksforgeeks.org/cpp/how-to-remove-an-element-from-vector-in-cpp/
+https://www.programiz.com/cpp-programming/map
+https://www.geeksforgeeks.org/cpp/implementation-of-graph-in-cpp/
+https://www.geeksforgeeks.org/cpp/how-to-read-from-a-file-in-cpp/
+levitin
