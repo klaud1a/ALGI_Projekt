@@ -26,28 +26,63 @@ int GetInput(Graph* g, string source) {
     return 0;
 }
 
+void RemoveVine(Graph* g,int id) {
+    auto neighbors = g->Neighbors(id);
+    if (neighbors.size() == 1) {
+        int neighbor = neighbors[0];
+        g->DeleteEdge(id, neighbor);
+        if (g->NodeExists(neighbor)) { //skontrolovat či to nebyla jeho posledna konekcie
+            RemoveVine(g, neighbor);
+        }
+        
+    }
+}
+
+bool isItTree(Graph* g, int nodes) {
+    bool LeafExists = false;
+    for (int i = 0; i < nodes; i++) {
+        if (g->NodeExists(i)) {
+            auto v = g->Neighbors(i);
+            if (v.size() == 1) {
+                LeafExists = true;
+                RemoveVine(g, i);
+            }
+        }
+    }
+    if (g->GetNodes() == 0) {
+        return true;
+    } else if(LeafExists == false) {
+        return false;
+    }
+    else {
+        isItTree(g, nodes);
+    }
+}
+
 int main() {
     Graph g;
-    string s = "TestData/MediumGraph2.txt";
+    string s = "TestData/MediumGraph4.txt";
 
-    if (GetInput(&g, s) == 1) {
+    if (GetInput(&g, s) == 1) { //create graph from .txt file
         return 1;
     }
 
-    cout << g.GetEdges() << endl;
-    cout << g.GetNodes() << endl;
+    int edges = g.GetEdges();
+    int nodes = g.GetNodes();
 
-    if (g.GetNodes() - g.GetEdges() != 1) {
-        cout << "not a tree" << endl;
+    if (nodes - edges != 1) {
+        cout << "Not a tree" << endl;
         return 0;
     }
 
-    auto v = g.Neighbors(3);
-
-    for (auto i : v)
-        cout << i << " ";
-
     //odoberanie "listov"
+
+    if (isItTree(&g, nodes)) {
+        cout << "Tree" << endl;
+    }
+    else {
+        cout << "Not a tree" << endl;
+    }
     
     return 0;
 }

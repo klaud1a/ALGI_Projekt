@@ -17,5 +17,7 @@ public:
 
     int GetEdges();
     int GetNodes();
+    bool NodeExists(int id);
+
     vector<int> Neighbors(int id);
 };

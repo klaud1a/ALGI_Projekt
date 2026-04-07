@@ -7,8 +7,8 @@ void Graph::CreateEdge(int id_A, int id_B) {
 }
 
 void Graph::DeleteEdge(int id_A, int id_B) {
-    auto v_a = this->graph[id_A];
-    auto v_b = this->graph[id_B];
+    auto &v_a = this->graph.at(id_A);
+    auto &v_b = this->graph.at(id_B);
     v_a.erase(find(v_a.begin(), v_a.end(), id_B));
     v_b.erase(find(v_b.begin(), v_b.end(), id_A));
 
@@ -22,7 +22,7 @@ void Graph::DeleteEdge(int id_A, int id_B) {
 }
 
 vector<int> Graph::Neighbors(int id) {
-    return this->graph[id];
+    return this->graph.at(id);
 }
 
 int Graph::GetEdges() {
@@ -30,4 +30,8 @@ int Graph::GetEdges() {
 }
 int Graph::GetNodes() {
     return graph.size();
+}
+
+bool Graph::NodeExists(int id) {
+    return graph.contains(id);
 }

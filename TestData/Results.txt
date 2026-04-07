@@ -1,19 +1,19 @@
-SmallGraph1.txt		tree
+SmallGraph1.txt		tree Y
 
-SmallGraph2.txt		non-tree
+SmallGraph2.txt		non-tree Y
 
-SmallGraph3.txt		non-tree
+SmallGraph3.txt		non-tree Y
 
-SmallGraph4.txt		non-tree
+SmallGraph4.txt		non-tree Y
 
 
-MediumGraph1.txt		tree
+MediumGraph1.txt		tree Y
 
-MediumGraph2.txt		non-tree
+MediumGraph2.txt		non-tree Y
 
-MediumGraph3.txt		non-tree
+MediumGraph3.txt		non-tree Y
 
-MediumGraph4.txt		non-tree
+MediumGraph4.txt		non-tree Y
 
-MediumGraph5.txt		non-tree
+MediumGraph5.txt		non-tree Y
 
