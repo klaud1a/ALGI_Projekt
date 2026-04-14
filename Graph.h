@@ -20,4 +20,5 @@ public:
     bool NodeExists(int id);
 
     vector<int> Neighbors(int id);
+    vector<int> NodeKeys();
 };

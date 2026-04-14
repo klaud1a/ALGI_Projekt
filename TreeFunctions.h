@@ -6,4 +6,4 @@ using namespace std;
 
 int GetInput(Graph* g, string source);
 void RemoveVine(Graph* g, int id);
-bool isItTree(Graph* g, int nodes);
+bool isItTree(Graph* g);

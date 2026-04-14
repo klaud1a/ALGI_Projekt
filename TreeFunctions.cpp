@@ -46,17 +46,17 @@ void RemoveVine(Graph* g,int id) {
 
 /** @brief funkce, která zisťuje, jestli je graf strom
  *  @param g graf, který zkoumáme
- *  @param nodes počet všech nodes
  *  @return true ak je strom, false ak není
  */
-bool isItTree(Graph* g, int nodes) {
+bool isItTree(Graph* g) {
     bool LeafExists = false;
-    for (int i = 0; i < nodes; i++) {
-        if (g->NodeExists(i)) {
-            auto v = g->Neighbors(i);
+    vector<int> nodes = g->NodeKeys();
+    for (int node: nodes) {
+        if (g->NodeExists(node)) {
+            auto v = g->Neighbors(node);
             if (v.size() == 1) {
                 LeafExists = true;
-                RemoveVine(g, i);
+                RemoveVine(g, node);
             }
         }
     }
@@ -65,6 +65,6 @@ bool isItTree(Graph* g, int nodes) {
     } else if(LeafExists == false) {
         return false;
     } else {
-        return isItTree(g, nodes);
+        return isItTree(g);
     }
 }

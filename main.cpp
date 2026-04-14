@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
     Graph g;
-    string s = "TestData/MediumGraph4.txt";
+    string s = "TestData/MediumGraph5.txt";
 
     if (GetInput(&g, s) == 1) { //create graph from .txt file
         return 1;
@@ -27,7 +27,7 @@ int main() {
 
     //odoberanie "listov"
 
-    if (isItTree(&g, nodes)) {
+    if (isItTree(&g)) {
         cout << "Tree" << endl;
     } else {
         cout << "Not a tree" << endl;

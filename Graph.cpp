@@ -58,3 +58,14 @@ int Graph::GetNodes() {
 bool Graph::NodeExists(int id) {
     return graph.contains(id);
 }
+
+/** @brief IDs všetkých node v strome
+ *  @return vektor s ID nodes (aka keys v map)
+ */
+vector<int> Graph::NodeKeys(){
+    vector<int> map_keys;
+    for (auto node : this->graph){
+        map_keys.push_back(node.first);
+    }
+    return map_keys;
+}
